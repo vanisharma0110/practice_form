@@ -29,8 +29,8 @@ def process_form_data(name, email):
     db_connection.commit()
 
     # Send email
-    sender_email = "your_email@example.com"
-    sender_password = "your_email_password"
+    sender_email = "vanisharma132001@gmail.com"
+    sender_password = "password"
     subject = "Your OTP"
     message = f"Hello {name},\nYour OTP is: {otp}"
 
@@ -41,7 +41,7 @@ def process_form_data(name, email):
 
     msg.attach(MIMEText(message, 'plain'))
 
-    server = smtplib.SMTP('smtp.example.com', 587)
+    server = smtplib.SMTP('smtp.vani.com', 587)
     server.starttls()
     server.login(sender_email, sender_password)
     server.sendmail(sender_email, email, msg.as_string())
